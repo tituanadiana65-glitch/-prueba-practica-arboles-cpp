@@ -56,7 +56,7 @@ Se utiliza un **ABB** donde la clave de ordenamiento es la **cédula**, lo que g
 ---
 
 ## Estructura del Proyecto
-´´´
+````
 -PRUEBA-PRACTICA-ARBOLES-.../
 │
 ├── Capturas/
@@ -90,10 +90,12 @@ Se utiliza un **ABB** donde la clave de ordenamiento es la **cédula**, lo que g
 │   └── sistema.exe
 │
 └── README.md
-´´´
+````
 ## Ejecutar
 cpp
+````
 cd \cpp
 g++ -std=c++11 *.cpp -o sistema.exe
- .\sistema.exe                      
+ .\sistema.exe
+````                  
 
