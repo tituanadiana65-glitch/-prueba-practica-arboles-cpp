@@ -35,7 +35,7 @@ NodoArbol* ArbolBinarioBusqueda::insertarRecursivo(NodoArbol* nodo, Estudiante e
     } else if (est.getCedula() > nodo->estudiante.getCedula()) {
         nodo->derecho = insertarRecursivo(nodo->derecho, est);
     } else {
-        cout << "Error: Ya existe un estudiante con la cédula " << est.getCedula() << endl;
+        cout << "Error: Ya existe un estudiante con la cedula " << est.getCedula() << endl;
     }
     return nodo;
 }
@@ -51,12 +51,12 @@ void ArbolBinarioBusqueda::insertarEstudiante() {
     double nota;
     
     cout << "\n--- INSERTAR ESTUDIANTE ---" << endl;
-    cout << "Cédula: ";
+    cout << "Cedula: ";
     cin >> cedula;
     
     // Validar cédula no vacía
     if (cedula.empty()) {
-        cout << "Error: Cédula no válida." << endl;
+        cout << "Error: Cedula no valida." << endl;
         return;
     }
     
@@ -102,13 +102,13 @@ NodoArbol* ArbolBinarioBusqueda::buscarRecursivo(NodoArbol* nodo, string cedula)
 // Buscar estudiante
 void ArbolBinarioBusqueda::buscarEstudiante() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     
     string cedula;
     cout << "\n--- BUSCAR ESTUDIANTE ---" << endl;
-    cout << "Ingrese cédula: ";
+    cout << "Ingrese cedula: ";
     cin >> cedula;
     
     NodoArbol* resultado = buscarRecursivo(raiz, cedula);
@@ -164,13 +164,13 @@ NodoArbol* ArbolBinarioBusqueda::eliminarRecursivo(NodoArbol* nodo, string cedul
 // Eliminar estudiante
 void ArbolBinarioBusqueda::eliminarEstudiante() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     
     string cedula;
     cout << "\n--- ELIMINAR ESTUDIANTE ---" << endl;
-    cout << "Ingrese cédula: ";
+    cout << "Ingrese cedula: ";
     cin >> cedula;
     
     raiz = eliminarRecursivo(raiz, cedula);
@@ -187,10 +187,10 @@ void ArbolBinarioBusqueda::inordenRecursivo(NodoArbol* nodo) {
 
 void ArbolBinarioBusqueda::recorridoInorden() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
-    cout << "\n--- RECORRIDO INORDEN (Ordenado por cédula) ---" << endl;
+    cout << "\n--- RECORRIDO INORDEN (Ordenado por cedula) ---" << endl;
     inordenRecursivo(raiz);
 }
 
@@ -205,7 +205,7 @@ void ArbolBinarioBusqueda::preordenRecursivo(NodoArbol* nodo) {
 
 void ArbolBinarioBusqueda::recorridoPreorden() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     cout << "\n--- RECORRIDO PREORDEN ---" << endl;
@@ -233,7 +233,7 @@ void ArbolBinarioBusqueda::recorridoPostorden() {
 // Recorrido por niveles BFS
 void ArbolBinarioBusqueda::recorridoPorNiveles() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     
@@ -284,7 +284,7 @@ int ArbolBinarioBusqueda::calcularAlturaRecursivo(NodoArbol* nodo) {
 
 void ArbolBinarioBusqueda::calcularAltura() {
     int altura = calcularAlturaRecursivo(raiz);
-    cout << "\n--- ALTURA DEL ÁRBOL ---" << endl;
+    cout << "\n--- ALTURA DEL ARBOL ---" << endl;
     cout << "Altura: " << altura << endl;
 }
 
@@ -300,7 +300,7 @@ void ArbolBinarioBusqueda::buscarNotaMayorRecursivo(NodoArbol* nodo, Estudiante*
 
 void ArbolBinarioBusqueda::buscarNotaMayor() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     
@@ -325,7 +325,7 @@ void ArbolBinarioBusqueda::buscarNotaMenorRecursivo(NodoArbol* nodo, Estudiante*
 
 void ArbolBinarioBusqueda::buscarNotaMenor() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     
@@ -351,7 +351,7 @@ void ArbolBinarioBusqueda::mostrarAprobadosRecursivo(NodoArbol* nodo) {
 
 void ArbolBinarioBusqueda::mostrarAprobados() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     
@@ -372,7 +372,7 @@ void ArbolBinarioBusqueda::mostrarReprobadosRecursivo(NodoArbol* nodo) {
 
 void ArbolBinarioBusqueda::mostrarReprobados() {
     if (raiz == nullptr) {
-        cout << "El árbol está vacío." << endl;
+        cout << "El arbol esta vacio." << endl;
         return;
     }
     

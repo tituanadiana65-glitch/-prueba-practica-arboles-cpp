@@ -1,7 +1,7 @@
 #ifndef NODOARBOL_H
 #define NODOARBOL_H
 
-#include "Estudiante.h"
+#include "estudiante.h"
 
 class NodoArbol {
 public:
@@ -10,7 +10,7 @@ public:
     NodoArbol* derecho;
 
     // Constructor
-    NodoArbol(Estudiante est);
+    NodoArbol(const Estudiante& est);
 };
 
 #endif

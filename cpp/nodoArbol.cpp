@@ -1,7 +1,7 @@
-#include "NodoArbol.h"
+#include "nodoArbol.h"
 
-NodoArbol::NodoArbol(Estudiante est) {
-    estudiante = est;
+// CORREGIDO: usar const& para evitar copias problemáticas
+NodoArbol::NodoArbol(const Estudiante& est) : estudiante(est) {
     izquierdo = nullptr;
     derecho = nullptr;
 }

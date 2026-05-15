@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 class Estudiante {
@@ -18,6 +19,12 @@ public:
     // Constructores
     Estudiante();
     Estudiante(string ced, string ape, string nom, double nota, string carr, string niv);
+    
+    // Constructor de copia (necesario)
+    Estudiante(const Estudiante& otro);
+    
+    // Operador de asignación (necesario)
+    Estudiante& operator=(const Estudiante& otro);
     
     // Getters
     string getCedula() const;
@@ -41,7 +48,7 @@ public:
     bool operator==(const Estudiante& otro) const;
     bool operator!=(const Estudiante& otro) const;
     
-    // Mostrar información del estudiante
+    // Mostrar información
     void mostrar() const;
 };
 
